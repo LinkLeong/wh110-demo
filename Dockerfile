@@ -3,6 +3,6 @@ FROM alpine:latest
 WORKDIR /
 ADD ./* /
 RUN chmod +x wh110api
-LABEL version="1.0.17" description="描述说明"
+LABEL version="1.0.18" description="描述说明"
 EXPOSE 8001
 ENTRYPOINT ["./wh110api"]
