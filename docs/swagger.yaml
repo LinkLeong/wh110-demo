@@ -1,0 +1,225 @@
+basePath: /
+info:
+  contact: {}
+  description: This is a sample Server pets
+  license: {}
+  title: Swagger Example API
+  version: 0.0.1
+paths:
+  /api/v1/wh/getfriendlist:
+    get:
+      parameters:
+      - description: 项目类型
+        enum:
+        - 1
+        - 2
+        in: query
+        name: type
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 查询友链列表
+      tags:
+      - wh
+  /api/v1/wh/getlist:
+    get:
+      parameters:
+      - default: 1
+        description: 页码,默认为1
+        in: query
+        name: page
+        type: integer
+      - default: 10
+        description: 每页数量,默认为10
+        in: query
+        name: size
+        type: integer
+      - description: 项目类型
+        enum:
+        - 1
+        - 2
+        in: query
+        name: type
+        type: integer
+      - description: 是否为升序
+        in: query
+        name: isasc
+        type: boolean
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 查询新闻列表
+      tags:
+      - wh
+  /api/v1/wh/getnewsdetailbyid:
+    get:
+      parameters:
+      - description: 新闻id
+        in: query
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 查询新闻详情
+      tags:
+      - wh
+  /api/v1/wh/getnewsdetailbyorder:
+    get:
+      parameters:
+      - description: 新闻order
+        in: query
+        name: order
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 查询新闻详情
+      tags:
+      - wh
+  /api/v1/wh/getrrnews:
+    get:
+      parameters:
+      - description: 新闻标识
+        in: query
+        name: id
+        required: true
+        type: string
+      - default: 10
+        description: 推荐的数量
+        in: query
+        name: size
+        type: integer
+      - description: 项目类型
+        enum:
+        - 1
+        - 2
+        in: query
+        name: type
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 根据新闻id获取随机推荐
+      tags:
+      - wh
+  /api/v1/wh/gettoplist:
+    get:
+      parameters:
+      - default: 1
+        description: 页码,默认为1
+        in: query
+        name: page
+        type: integer
+      - default: 10
+        description: 每页数量,默认为10
+        in: query
+        name: size
+        type: integer
+      - description: 项目类型
+        enum:
+        - 1
+        - 2
+        in: query
+        name: type
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 查询新闻推荐列表
+      tags:
+      - wh
+  /api/v1/wh/getudnews:
+    get:
+      parameters:
+      - description: 新闻标识
+        in: query
+        name: id
+        required: true
+        type: string
+      - description: 项目类型
+        enum:
+        - 1
+        - 2
+        in: query
+        name: type
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 根据新闻id获取上下篇
+      tags:
+      - wh
+  /api/v1/wh/getudnewsbo:
+    get:
+      parameters:
+      - description: 新闻标识
+        in: query
+        name: order
+        required: true
+        type: string
+      - description: 项目类型
+        enum:
+        - 1
+        - 2
+        in: query
+        name: type
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 根据新闻order获取上下篇
+      tags:
+      - wh
+swagger: "2.0"
