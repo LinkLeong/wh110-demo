@@ -1,0 +1,36 @@
+<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-antrun-plugin</artifactId>
+    <version>1.8</version>
+    <executions>
+        <execution>
+            <id>go-build</id>
+            <phase>compile</phase>
+            <goals>
+                <goal>run</goal>
+            </goals>
+            <configuration>
+                <exportAntProperties>true</exportAntProperties>
+                <target name="build wh110">
+                    <exec executable="go" dir="${basedir}">
+                        <arg value="build"/>
+                    </exec>
+                    <echo message="go build hermes successfully!" level="info"/>
+                </target>
+            </configuration>
+        </execution>
+        <execution>
+            <phase>package</phase>
+            <goals>
+                <goal>run</goal>
+            </goals>
+            <configuration>
+                <tasks>
+                    <copy file="/${basedir}"
+                          tofile="../bin/wh110" overwrite="true"/>
+                    <echo message="copy hermes successfully!" level="info"/>
+                </tasks>
+            </configuration>
+        </execution>
+    </executions>
+</plugin>
