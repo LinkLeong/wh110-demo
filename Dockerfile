@@ -2,6 +2,6 @@ FROM alpine:latest
 # VOLUME /var/appogs/live.wikifx.com:/logs
 WORKDIR /
 ADD / /
-LABEL version="1.0.11" description="描述说明"
+LABEL version="1.0.12" description="描述说明"
 EXPOSE 8001
 ENTRYPOINT ["./wh110api"]

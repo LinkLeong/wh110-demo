@@ -37,6 +37,15 @@ func InitRouter() *gin.Engine {
 			"message": WAIHUI,
 		})
 	})
+	r.GET("/text/index3.html", func(c *gin.Context) {
+
+		WAIHUI := os.Environ()
+
+		c.JSON(200, gin.H{
+			"ms":      "全部环境变量",
+			"message": WAIHUI,
+		})
+	})
 	r.GET("/text/index1.html", func(c *gin.Context) {
 
 		var WAIHUI string
