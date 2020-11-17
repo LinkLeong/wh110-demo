@@ -3,6 +3,7 @@ package setting
 import (
 	"github.com/go-ini/ini"
 	"log"
+	"os"
 )
 
 //app节的配置
@@ -37,7 +38,11 @@ var Cfg *ini.File
 
 func Setup() {
 	var err error
-	Cfg, err = ini.Load("/conf/conf.ini")
+	if len(os.Getenv("WAIHUI")) > 0 {
+		Cfg, err = ini.Load("/conf/conf.release.ini")
+	} else {
+		Cfg, err = ini.Load("/conf/conf.ini")
+	}
 	if err != nil {
 		log.Fatalf("setting.Setup, fail to parse 'conf/app.ini': %v", err)
 	}
