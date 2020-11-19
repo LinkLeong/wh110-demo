@@ -15,6 +15,7 @@ import (
 // @BasePath /
 func main() {
 	//model.Setup()
+	fmt.Println("开始运行")
 	setting.Setup()
 	logging.Setup()
 	mgo.Init()

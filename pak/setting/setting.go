@@ -39,6 +39,7 @@ var Cfg *ini.File
 
 func Setup() {
 	var err error
+	fmt.Println("进入到/conf/conf.ini")
 	if len(os.Getenv("WAIHUI")) > 0 {
 		fmt.Println("进入到/conf/conf.ini")
 		Cfg, err = ini.Load("/conf/conf.ini")
