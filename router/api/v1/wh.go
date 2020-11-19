@@ -51,7 +51,7 @@ func GetNewsDetailByOrder(c *gin.Context) {
 // @Tags wh
 // @Param page query int false "页码,默认为1" default(1)
 // @Param size query int false "每页数量,默认为10" default(10)
-// @Param type query int false "项目类型" Enums(1, 2 )
+// @Param type query int false "项目类型" Enums(1, 2, 3 )
 // @Security ApiKeyAuth
 // @Success 200 {string} string "OK"
 // @Router /api/v1/wh/gettoplist [get]
@@ -73,7 +73,7 @@ func GetNewsTopList(c *gin.Context) {
 // @Tags wh
 // @Param page query int false "页码,默认为1" default(1)
 // @Param size query int false "每页数量,默认为10" default(10)
-// @Param type query int false "项目类型" Enums(1, 2 )
+// @Param type query int false "项目类型" Enums(1, 2, 3 )
 // @Param isasc query bool false "是否为升序"
 // @Security ApiKeyAuth
 // @Success 200 {string} string "OK"
@@ -103,7 +103,7 @@ func GetNewsList(c *gin.Context) {
 // @Summary 查询友链列表
 // @Produce  json
 // @Tags wh
-// @Param type query int false "项目类型" Enums(1, 2 )
+// @Param type query int false "项目类型" Enums(1, 2, 3 )
 // @Security ApiKeyAuth
 // @Success 200 {string} string "OK"
 // @Router /api/v1/wh/getfriendlist [get]
@@ -127,7 +127,7 @@ func GetFriendList(c *gin.Context) {
 // @Tags wh
 // @Param id query string true "新闻标识"
 // @Param size query int false "推荐的数量" default(10)
-// @Param type query int false "项目类型" Enums(1, 2 )
+// @Param type query int false "项目类型" Enums(1, 2, 3 )
 // @Security ApiKeyAuth
 // @Success 200 {string} string "OK"
 // @Router /api/v1/wh/getrrnews [get]
@@ -148,7 +148,7 @@ func GetRecommendRandomNewsById(c *gin.Context) {
 // @Produce  json
 // @Tags wh
 // @Param id query string true "新闻标识"
-// @Param type query int false "项目类型" Enums(1, 2 )
+// @Param type query int false "项目类型" Enums(1, 2,3 )
 // @Security ApiKeyAuth
 // @Success 200 {string} string "OK"
 // @Router /api/v1/wh/getudnews [get]
@@ -173,7 +173,7 @@ func GetUpDownNewsById(c *gin.Context) {
 // @Produce  json
 // @Tags wh
 // @Param order query string true "新闻标识"
-// @Param type query int false "项目类型" Enums(1, 2 )
+// @Param type query int false "项目类型" Enums(1, 2,3 )
 // @Security ApiKeyAuth
 // @Success 200 {string} string "OK"
 // @Router /api/v1/wh/getudnewsbo [get]

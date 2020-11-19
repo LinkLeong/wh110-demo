@@ -13,6 +13,7 @@ paths:
         enum:
         - 1
         - 2
+        - 3
         in: query
         name: type
         type: integer
@@ -45,6 +46,7 @@ paths:
         enum:
         - 1
         - 2
+        - 3
         in: query
         name: type
         type: integer
@@ -121,6 +123,7 @@ paths:
         enum:
         - 1
         - 2
+        - 3
         in: query
         name: type
         type: integer
@@ -153,6 +156,7 @@ paths:
         enum:
         - 1
         - 2
+        - 3
         in: query
         name: type
         type: integer
@@ -180,6 +184,7 @@ paths:
         enum:
         - 1
         - 2
+        - 3
         in: query
         name: type
         type: integer
@@ -207,6 +212,7 @@ paths:
         enum:
         - 1
         - 2
+        - 3
         in: query
         name: type
         type: integer

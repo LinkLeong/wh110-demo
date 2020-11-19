@@ -43,7 +43,8 @@ var doc = `{
                     {
                         "enum": [
                             1,
-                            2
+                            2,
+                            3
                         ],
                         "type": "integer",
                         "description": "项目类型",
@@ -93,7 +94,8 @@ var doc = `{
                     {
                         "enum": [
                             1,
-                            2
+                            2,
+                            3
                         ],
                         "type": "integer",
                         "description": "项目类型",
@@ -215,7 +217,8 @@ var doc = `{
                     {
                         "enum": [
                             1,
-                            2
+                            2,
+                            3
                         ],
                         "type": "integer",
                         "description": "项目类型",
@@ -265,7 +268,8 @@ var doc = `{
                     {
                         "enum": [
                             1,
-                            2
+                            2,
+                            3
                         ],
                         "type": "integer",
                         "description": "项目类型",
@@ -308,7 +312,8 @@ var doc = `{
                     {
                         "enum": [
                             1,
-                            2
+                            2,
+                            3
                         ],
                         "type": "integer",
                         "description": "项目类型",
@@ -351,7 +356,8 @@ var doc = `{
                     {
                         "enum": [
                             1,
-                            2
+                            2,
+                            3
                         ],
                         "type": "integer",
                         "description": "项目类型",

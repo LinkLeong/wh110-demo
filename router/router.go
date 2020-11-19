@@ -65,6 +65,8 @@ func InitRouter() *gin.Engine {
 	apiv1.GET("/wh/getrrnews", v1.GetRecommendRandomNewsById)
 	apiv1.GET("/wh/getudnews", v1.GetUpDownNewsById)
 	apiv1.GET("/wh/getudnewsbo", v1.GetUpDownNewsByOrder)
+
+	apiv1.GET("/cms/adduser", v1.AddAdminUser)
 	apiv1.Use(jwt.JWT())
 	{
 		//apiv1.GET("/tags", v1.GetTags)
