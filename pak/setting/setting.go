@@ -1,6 +1,7 @@
 package setting
 
 import (
+	"fmt"
 	"github.com/go-ini/ini"
 	"log"
 	"os"
@@ -39,12 +40,14 @@ var Cfg *ini.File
 func Setup() {
 	var err error
 	if len(os.Getenv("WAIHUI")) > 0 {
+		fmt.Println("进入到/conf/conf.ini")
 		Cfg, err = ini.Load("/conf/conf.ini")
 	} else {
-		Cfg, err = ini.Load("/conf/conf.release.ini")
+		fmt.Println("进入到/conf/confrelease.ini")
+		Cfg, err = ini.Load("/conf/confrelease.ini")
 	}
 	if err != nil {
-		log.Fatalf("setting.Setup, fail to parse 'conf/app.ini': %v", err)
+		log.Fatalf("setting.Setup, fail to parse 'conf/release.ini': %v", err)
 	}
 
 	mapTo("app", AppSetting)

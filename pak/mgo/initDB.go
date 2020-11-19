@@ -15,7 +15,9 @@ type Database struct {
 
 //链接数据库
 func SetConnect() *mongo.Client {
+
 	url := setting.DBSetting.DB_IP
+	fmt.Println("数据库链接" + setting.DBSetting.DB_IP)
 	ctx, cancle := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancle()
 	client, err := mongo.Connect(ctx, options.Client().ApplyURI(url))
